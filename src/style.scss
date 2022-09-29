@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 $background-color: #4a98f7;
 
 @mixin flex($gap: normal, $flex-wrap: nowrap, $flex-direction: row, $justify-content: normal, $align-items: normal) {
@@ -39,17 +41,22 @@ $background-color: #4a98f7;
     left: $left;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    background: none;
-    list-style: none;
-    text-decoration: none;
-    font-family: Consolas, sans-serif;
+@mixin globalStyles($font-family...) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        background: none;
+        list-style: none;
+        text-decoration: none;
+        font-family: $font-family;
+    }
 }
+
+@include globalStyles('Poppins', Consolas, sans-serif);
+
 
 body {
     @include flex($justify-content: center, $align-items: center);
