@@ -4,10 +4,65 @@
 	<meta charset="UTF-8" />
 	<link href="/favicon.png" rel="icon" type="image/png" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<title>Drawing-Board-TS-Canvas</title>
+	<title>Drawing App</title>
 </head>
 <body>
-<div id="app"></div>
+<div class="container">
+	<section class="tools-board">
+		<div class="row">
+			<label class="title">Shapes</label>
+			<ul class="options">
+				<li class="option tool" id="rectangle">
+					<img alt="rectangle" src="./icons/rectangle.svg">
+					<span>Rectangle</span>
+				</li>
+				<li class="option tool" id="circle">
+					<img alt="circle" src="./icons/circle.svg">
+					<span>Circle</span>
+				</li>
+				<li class="option tool" id="triangle">
+					<img alt="triangle" src="./icons/triangle.svg">
+					<span>Triangle</span>
+				</li>
+				<li class="option">
+					<input type="checkbox" id="fill-color"/>
+					<label for="fill-color">Fill color</label>
+				</li>
+			</ul>
+		</div>
+		<div class="row">
+			<label class="title">Options</label>
+			<ul class="options">
+				<li class="option active tool" id="brush">
+					<img alt="brush" src="./icons/brush.svg">
+					<span>Brush</span>
+				</li>
+				<li class="option tool" id="eraser">
+					<img alt="eraser" src="./icons/eraser.svg">
+					<span>Eraser</span>
+				</li>
+				<li class="option">
+					<input type="range" id="size-slider" min="1" max="30" value="5"/>
+				</li>
+			</ul>
+		</div>
+		<div class="row colors">
+			<label class="title">Colors</label>
+			<ul class="options">
+				<li class="option"></li>
+				<li class="option selected"></li>
+				<li class="option"></li>
+				<li class="option"></li>
+				<li class="option"><input type="color" name="" id="color-picker"></li>
+			</ul>
+		</div>
+		<div class="row buttons">
+			<button class="clear-canvas">Clear Canvas</button>
+			<button class="save-img">Save as Image</button>
+		</div>
+	</section>
+	<section class="drawing-board"><canvas></canvas></section>
+</div>
 <script src="/src/main.ts" type="module"></script>
 </body>
 </html>
