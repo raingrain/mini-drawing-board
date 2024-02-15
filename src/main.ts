@@ -108,8 +108,8 @@ const drawing = (e: MouseEvent) => {
     if (selectedTool === "brush" || selectedTool === "eraser") {
         // 选择橡皮擦就把线条颜色改成白色即可
         ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor;
-        ctx.lineTo(e.offsetX, e.offsetY); // creating line according to the mouse pointer
-        ctx.stroke(); // drawing/filling line with color
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
     } else if (selectedTool === "rectangle") {
         drawRect(e);
     } else if (selectedTool === "circle") {
