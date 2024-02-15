@@ -1,1 +1,1 @@
-# 🎉[Drawing Board](https://github.com/raingrain/drawing-board)🎉
+# 🎉[Mini Drawing Board](https://github.com/raingrain/mini-drawing-board)🎉
