@@ -1,72 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<link href="/raingrain.ico" rel="icon" type="image/x-icon" />
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<title>Drawing Board</title>
-</head>
-<body>
-<div class="container">
-	<section class="tools-board">
-		<div class="row">
-			<label class="title">Shapes</label>
-			<ul class="options">
-				<li class="option tool" id="rectangle">
-					<img alt="Rectangle" src="src/assets/icons/rectangle.svg">
-					<span>Rectangle</span>
-				</li>
-				<li class="option tool" id="circle">
-					<img alt="Circle" src="src/assets/icons/circle.svg">
-					<span>Circle</span>
-				</li>
-				<li class="option tool" id="triangle">
-					<img alt="Triangle" src="src/assets/icons/triangle.svg">
-					<span>Triangle</span>
-				</li>
-				<li class="option">
-					<input id="fill-color" type="checkbox">
-					<label for="fill-color">Fill color</label>
-				</li>
-			</ul>
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/favicon.svg"
+		/>
+		<meta
+			content="width=device-width, initial-scale=1.0"
+			name="viewport"
+		/>
+		<title>Drawing Board</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="tools-board">
+				<div class="row">
+					<label class="title">Shapes</label>
+					<ul class="options">
+						<li
+							class="option tool"
+							id="rectangle"
+						>
+							<img
+								alt="Rectangle"
+								src="src/assets/icons/rectangle.svg"
+							/>
+							<span>Rectangle</span>
+						</li>
+						<li
+							class="option tool"
+							id="circle"
+						>
+							<img
+								alt="Circle"
+								src="src/assets/icons/circle.svg"
+							/>
+							<span>Circle</span>
+						</li>
+						<li
+							class="option tool"
+							id="triangle"
+						>
+							<img
+								alt="Triangle"
+								src="src/assets/icons/triangle.svg"
+							/>
+							<span>Triangle</span>
+						</li>
+						<li class="option">
+							<input
+								id="fill-color"
+								type="checkbox"
+							/>
+							<label for="fill-color">Fill color</label>
+						</li>
+					</ul>
+				</div>
+				<div class="row">
+					<label class="title">Options</label>
+					<ul class="options">
+						<li
+							class="option active tool"
+							id="brush"
+						>
+							<img
+								alt="Brush"
+								src="src/assets/icons/brush.svg"
+							/>
+							<span>Brush</span>
+						</li>
+						<li
+							class="option tool"
+							id="eraser"
+						>
+							<img
+								alt="Eraser"
+								src="src/assets/icons/eraser.svg"
+							/>
+							<span>Eraser</span>
+						</li>
+						<li class="option">
+							<input
+								id="size-slider"
+								max="30"
+								min="1"
+								type="range"
+								value="5"
+							/>
+						</li>
+					</ul>
+				</div>
+				<div class="row colors">
+					<label class="title">Colors</label>
+					<ul class="options">
+						<li class="option"></li>
+						<li class="option selected"></li>
+						<li class="option"></li>
+						<li class="option"></li>
+						<li class="option">
+							<input
+								id="color-picker"
+								type="color"
+								value="#4A98F7"
+							/>
+						</li>
+					</ul>
+				</div>
+				<div class="row buttons">
+					<button class="clear-canvas">Clear Canvas</button>
+					<button class="save-img">Save As Image</button>
+				</div>
+			</section>
+			<section class="drawing-board">
+				<canvas></canvas>
+			</section>
 		</div>
-		<div class="row">
-			<label class="title">Options</label>
-			<ul class="options">
-				<li class="option active tool" id="brush">
-					<img alt="Brush" src="src/assets/icons/brush.svg">
-					<span>Brush</span>
-				</li>
-				<li class="option tool" id="eraser">
-					<img alt="Eraser" src="src/assets/icons/eraser.svg">
-					<span>Eraser</span>
-				</li>
-				<li class="option">
-					<input id="size-slider" max="30" min="1" type="range" value="5">
-				</li>
-			</ul>
-		</div>
-		<div class="row colors">
-			<label class="title">Colors</label>
-			<ul class="options">
-				<li class="option"></li>
-				<li class="option selected"></li>
-				<li class="option"></li>
-				<li class="option"></li>
-				<li class="option">
-					<input id="color-picker" type="color" value="#4A98F7">
-				</li>
-			</ul>
-		</div>
-		<div class="row buttons">
-			<button class="clear-canvas">Clear Canvas</button>
-			<button class="save-img">Save As Image</button>
-		</div>
-	</section>
-	<section class="drawing-board">
-		<canvas></canvas>
-	</section>
-</div>
-<script src="/src/main.ts" type="module"></script>
-</body>
+		<script
+			src="/src/main.ts"
+			type="module"
+		></script>
+	</body>
 </html>
